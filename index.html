@@ -7,13 +7,36 @@
   <title>TRIPIX</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+ <!-- Meta Description pour SEO -->
+ <meta name="description" content="Découvrez TRIPIX, votre créateur de voyages sur mesure. Nous offrons des expériences uniques en Côte d'Ivoire, en France, et bien plus !">
+
+ <!-- Meta Keywords (facultatif, certains moteurs ne les utilisent plus) -->
+ <meta name="keywords" content="voyages sur mesure, destinations, Côte d'Ivoire, France, tourisme, vacances, expérience unique">
 </head>
 
 <style>
   body {
     font-family: 'Montserrat', sans-serif;
   }
+  .carousel-item {
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 0;
+  }
 
+  .carousel-item.opacity-100 {
+    opacity: 1;
+    z-index: 1;
+  }
+  .carousel-item.active {
+  opacity: 1;
+  z-index: 1;
+}
   .mask-image {
     mask-image: url('/assets/images/mask.png');
     mask-size: contain;
@@ -34,46 +57,80 @@
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
   }
-
-  /* Animation de défilement */
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 1s ease-in-out;
   }
 
-  .animate-scroll {
-    display: flex;
-    animation: scroll 30s linear infinite;
+  .carousel-item.active {
+    opacity: 1;
+    z-index: 1;
   }
-
-  /* Pause l'animation au survol */
-  .animate-scroll:hover {
-    animation-play-state: paused;
-  }
+  .parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 </style>
+
 
 <body class="bg-white text-gray-800">
   <!-- Navbar -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-back-600">TRIPIX TRAVEL</h1>
-      <ul class="flex space-x-6 text-gray-600">
-        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
-        <li><a href="#about" class="hover:text-blue-600">A Propos</a></li>
-        <li><a href="#travel" class="hover:text-blue-600">Destinations</a></li>
-        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
-      </ul>
-      <div class="text-right text-sm">
-        <a href="#" class="flex items-center justify-center w-20 h-10 rounded-full border border-gray-300 hover:border-blue-600 hover:text-blue-600 transition duration-300">
+<!-- Navbar -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-black">TRIPIX TRAVEL</h1>
+
+    <!-- Burger Button (visible uniquement sur mobile) -->
+    <button 
+      class="block md:hidden text-gray-600 focus:outline-none"
+      id="menu-toggle"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation Links (Desktop) -->
+    <ul class="hidden md:flex space-x-6 text-gray-600">
+      <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+      <li><a href="#about" class="hover:text-blue-600">A Propos</a></li>
+      <li><a href="#travel" class="hover:text-blue-600">Destinations</a></li>
+      <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+    </ul>
+
+    <!-- Login Button -->
+    <div class="hidden md:block text-right text-sm">
+      <a href="#" class="flex items-center justify-center w-20 h-10 rounded-full border border-gray-300 hover:border-blue-600 hover:text-blue-600 transition duration-300">
+        Login
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="hidden md:hidden bg-white shadow-lg" id="mobile-menu">
+    <ul class="flex flex-col text-center space-y-4 py-4 text-gray-600">
+      <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+      <li><a href="#about" class="hover:text-blue-600">A Propos</a></li>
+      <li><a href="#travel" class="hover:text-blue-600">Destinations</a></li>
+      <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+      <li>
+        <a href="#" class="inline-block w-20 h-10 rounded-full border border-gray-300 hover:border-blue-600 hover:text-blue-600 transition duration-300 mx-auto">
           Login
         </a>
-      </div>
-    </div>
-  </nav>
+      </li>
+    </ul>
+  </div>
+</nav>
+
   
 
   <!-- Carrousel -->
@@ -91,7 +148,7 @@
 
       <!-- Images du carrousel -->
       <div class="absolute inset-0 h-full w-full">
-        <div class="carousel-item absolute w-full h-full bg-cover bg-center" style="background-image: url('/assets/images/header1.jpg');"></div>
+        <div class="carousel-item active absolute w-full h-full bg-cover bg-center" style="background-image: url('/assets/images/header1.jpg');"></div>
         <div class="carousel-item absolute w-full h-full bg-cover bg-center" style="background-image: url('/assets/images/header2.jpg');"></div>
         <div class="carousel-item absolute w-full h-full bg-cover bg-center" style="background-image: url('/assets/images/header3.jpg');"></div>
       </div>
@@ -176,29 +233,33 @@
     </div>
   </section>
 
-  <section class="py-20 ">
+  <section class="py-20">
     <!-- Bannière avec carré débordant vers le haut -->
     <div class="relative bg-cover bg-center" style="background-image: url('/assets/images/header1.jpg'); height: 500px;">
     
-      <!-- Wrapper for the content to match width with section above -->
-      <div class="container mx-auto px-8">
-        <!-- Carré avec des bords carrés et une taille fixée -->
-        <div class="absolute top-[-8rem] bg-gray-100 shadow-lg p-8 w-full max-w-[500px] h-[500px] mx-auto">
-          <h3 class="text-3xl font-bold text-center mb-4">En Côte D'Ivoire, en France, en Europe, ou dans les destinations lointaines imaginons ensemble votre voyage sur mesure</h3>
-          <div class="h-1 w-24 bg-blue-600 mx-auto my-4"></div>
-          <p class="text-center text-lg mb-4">
-            Imaginons ensemble votre voyage sur mesure.
-          </p>
-          <p class="text-center text-base leading-relaxed mb-6">
-            Un voyage pensé et organisé en tenant compte de tous vos souhaits adaptés à la destination choisie, pour une expérience unique pleine de rencontres et d’attentions qui feront de votre voyage un véritable voyage sur mesure.
-          </p>
-          <a href="#" class="bg-blue-100 px-4 py-2 rounded-lg hover:bg-blue-300 block text-center">
-            Découvrir
-          </a>
+        <!-- Wrapper for the content -->
+        <div class="container mx-auto px-4 md:px-8 relative">
+            <!-- Carré avec des bords carrés et une taille fixée -->
+            <div 
+                class="bg-gray-100 shadow-lg p-8 mx-auto w-full max-w-[90%] sm:max-w-[500px] h-auto sm:h-[500px] relative sm:absolute sm:top-[-8rem] flex flex-col items-center">
+                <h3 class="text-xl sm:text-3xl font-bold text-center mb-4">
+                    En Côte D'Ivoire, en France, en Europe, ou dans les destinations lointaines imaginons ensemble votre voyage sur mesure
+                </h3>
+                <div class="h-1 w-24 bg-blue-600 mx-auto my-4"></div>
+                <p class="text-center text-sm sm:text-lg mb-4">
+                    Imaginons ensemble votre voyage sur mesure.
+                </p>
+                <p class="text-center text-xs sm:text-base leading-relaxed mb-6">
+                    Un voyage pensé et organisé en tenant compte de tous vos souhaits adaptés à la destination choisie, pour une expérience unique pleine de rencontres et d’attentions qui feront de votre voyage un véritable voyage sur mesure.
+                </p>
+                <a href="#" class="bg-blue-100 px-4 py-2 rounded-lg hover:bg-blue-300 block text-center">
+                    Découvrir
+                </a>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
   
   
   <section id="travel" class="container mx-auto pb-20 px-8">
@@ -519,54 +580,56 @@
 
 <section class="relative">
   <!-- Bannière -->
-  <div class="w-full h-[650px] bg-cover bg-center" style="background-image: url('/assets/images/header2.jpg');">
+  <div class="w-full h-[250px] sm:h-[400px] lg:h-[650px] bg-cover bg-center mb-12" style="background-image: url('/assets/images/header2.jpg');">
     <!-- Contenu de la bannière -->
-    <div class="container mx-auto text-center py-20">
-      <h2 class="text-4xl font-bold text-white mb-4">Rencontrez nos meilleurs guides de voyage professionnels</h2>
-      <p class="text-lg text-white max-w-2xl mx-auto">
+    <div class="container mx-auto text-center py-6 sm:py-10 lg:py-20 px-4">
+      <h2 class="text-xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-4">Rencontrez nos meilleurs guides de voyage professionnels</h2>
+      <p class="text-sm sm:text-lg lg:text-lg text-white max-w-md sm:max-w-lg lg:max-w-2xl mx-auto">
         Vitae nunc sed velit dignissim sodales ut eu sem integer. Consectetur adipiscing elit ut aliquam purus sit amet. Risus in hendrerit gravida rutrum quisque non.
       </p>
     </div>
   </div>
 
   <!-- Section des cartes -->
-  <div class="container mx-auto px-8 -mt-96">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <div class="container mx-auto px-4 sm:px-8 -mt-32 sm:-mt-40 lg:-mt-96">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
       <!-- Carte 1 -->
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="/assets/images/team.jpg" alt="Guide 1" class="w-full h-90 object-cover">
+        <img src="/assets/images/team.jpg" alt="Guide 1" class="w-full  h-80 sm:h-80 lg:h-80 object-cover">
         <div class="p-6 text-center">
-          <h3 class="text-xl font-bold mb-2">Mme EMBERLYNN</h3>
-          <p class="text-gray-600">5 ans d'expérience en tant que guide</p>
+          <h3 class="text-lg sm:text-xl font-bold mb-2">Mme EMBERLYNN</h3>
+          <p class="text-gray-600 text-sm sm:text-base">5 ans d'expérience en tant que guide</p>
         </div>
       </div>
       <!-- Carte 2 -->
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="/assets/images/team.jpg" alt="Guide 2" class="w-full h-90 object-cover">
+        <img src="/assets/images/team.jpg" alt="Guide 2" class="w-full h-80 sm:h-80 lg:h-80 object-cover">
         <div class="p-6 text-center">
-          <h3 class="text-xl font-bold mb-2">M. LUCAS</h3>
-          <p class="text-gray-600">7 ans d'expérience en tant que guide</p>
+          <h3 class="text-lg sm:text-xl font-bold mb-2">M. LUCAS</h3>
+          <p class="text-gray-600 text-sm sm:text-base">7 ans d'expérience en tant que guide</p>
         </div>
       </div>
       <!-- Carte 3 -->
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="/assets/images/team.jpg" alt="Guide 3" class="w-full h-90 object-cover">
+        <img src="/assets/images/team.jpg" alt="Guide 3" class="w-full h-80 sm:h-80 lg:h-80 object-cover">
         <div class="p-6 text-center">
-          <h3 class="text-xl font-bold mb-2">Mme SOPHIE</h3>
-          <p class="text-gray-600">10 ans d'expérience en tant que guide</p>
+          <h3 class="text-lg sm:text-xl font-bold mb-2">Mme SOPHIE</h3>
+          <p class="text-gray-600 text-sm sm:text-base">10 ans d'expérience en tant que guide</p>
         </div>
       </div>
       <!-- Carte 4 -->
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="/assets/images/team.jpg" alt="Guide 4" class="w-full h-90 object-cover">
+        <img src="/assets/images/team.jpg" alt="Guide 4" class="w-full h-80 sm:h-80 lg:h-80 object-cover">
         <div class="p-6 text-center">
-          <h3 class="text-xl font-bold mb-2">M. THOMAS</h3>
-          <p class="text-gray-600">3 ans d'expérience en tant que guide</p>
+          <h3 class="text-lg sm:text-xl font-bold mb-2">M. THOMAS</h3>
+          <p class="text-gray-600 text-sm sm:text-base">3 ans d'expérience en tant que guide</p>
         </div>
       </div>
     </div>
   </div>  
 </section>
+
+
 
 <!-- Section "Nos clients et invités" -->
 <section class="py-20">
@@ -664,34 +727,33 @@
 
 
 
-
-
-  
-
-
-
-
-  <!-- Script -->
   <script>
-    let currentSlide = 1;
-    const totalSlides = 3;
+    // Carousel
+let currentSlide = 1;
+const totalSlides = 3;
 
-    function showSlide(slide) {
-      document.querySelectorAll('.carousel-item').forEach((item) => {
-        item.classList.add('opacity-0');
-        item.classList.remove('opacity-100');
-      });
+function showSlide(slide) {
+  const items = document.querySelectorAll('.carousel-item');
 
-      const targetSlide = document.querySelectorAll('.carousel-item')[slide - 1];
-      targetSlide.classList.remove('opacity-0');
-      targetSlide.classList.add('opacity-100');
-      currentSlide = slide;
+  items.forEach((item, index) => {
+    item.classList.remove('active');
+    if (index === slide - 1) {
+      item.classList.add('active');
     }
+  });
 
-    setInterval(() => {
-      currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 1;
-      showSlide(currentSlide);
-    }, 5000);
+  currentSlide = slide;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  showSlide(1); 
+});
+
+setInterval(() => {
+  currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 1;
+  showSlide(currentSlide);
+}, 5000);
+
 
     // JavaScript for toggling "Lire la suite" and "Réduire"
     const toggleButton = document.getElementById("toggle-button");
@@ -708,7 +770,13 @@
         toggleButton.textContent = "Lire la suite";
       }
     });
-    
+    const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
+
   </script>
 </body>
 
