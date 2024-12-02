@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRIPIX</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+ <!-- Meta Description pour SEO -->
+ <meta name="description" content="Découvrez TRIPIX, votre créateur de voyages sur mesure. Nous offrons des expériences uniques en Côte d'Ivoire, en France, et bien plus !">
+
+ <!-- Meta Keywords (facultatif, certains moteurs ne les utilisent plus) -->
+ <meta name="keywords" content="voyages sur mesure, destinations, Côte d'Ivoire, France, tourisme, vacances, expérience unique">
+</head>
+
+
+
+
+<body class="text-gray-800 ">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+          <!-- Logo -->
+          <h1 class="text-2xl font-bold text-black">TRIPIX TRAVEL</h1>
+      
+          <!-- Burger Button (visible uniquement sur mobile) -->
+          <button 
+            class="block md:hidden text-gray-600 focus:outline-none"
+            id="menu-toggle"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+      
+          <!-- Navigation Links (Desktop) -->
+          <ul class="hidden md:flex space-x-6 text-gray-600">
+            <li><a href="/index.html" class="hover:text-blue-600">Home</a></li>
+            <li><a href="#about" class="hover:text-blue-600">A Propos</a></li>
+            <li><a href="#travel" class="hover:text-blue-600">Destinations</a></li>
+            <li><a href="/pricing.html" class="hover:text-blue-600">Pricing</a></li>
+            <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+          </ul>
+      
+          <!-- Login Button -->
+          <div class="hidden md:block text-right text-sm">
+            <a href="#" class="flex items-center justify-center w-20 h-10 rounded-full border border-gray-300 hover:border-blue-600 hover:text-blue-600 transition duration-300">
+              Login
+            </a>
+          </div>
+        </div>
+      
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white shadow-lg" id="mobile-menu">
+          <ul class="flex flex-col text-center space-y-4 py-4 text-gray-600">
+            <li><a href="/index.html" class="hover:text-blue-600">Home</a></li>
+            <li><a href="#about" class="hover:text-blue-600">A Propos</a></li>
+            <li><a href="#travel" class="hover:text-blue-600">Destinations</a></li>
+            <li><a href="/pricing.html" class="hover:text-blue-600">Pricing</a></li>
+            <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+            <li>
+              <a href="#" class="inline-block w-20 h-10 rounded-full border border-gray-300 hover:border-blue-600 hover:text-blue-600 transition duration-300 mx-auto">
+                Login
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+  <!-- Conteneur principal avec Grid -->
+  <div class="grid grid-cols-12 gap-8 p-8 container mx-auto py-20">
+
+    <!-- Section 1: Menu -->
+    <section class="col-span-3 flex flex-col justify-between">
+      <div class="bg-[#FF9933] text-white p-6 rounded-lg mb-6 h-[450px]">
+        <h2 class="text-lg font-bold mb-8">Menu</h2>
+        <ul class="space-y-6">
+          <li class="flex items-center">
+            <span class="mr-4">📚</span>
+            <span class="font-semibold">Information</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-4">📍</span>
+            <span class="font-semibold">Location</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-4">💬</span>
+            <span class="font-semibold">Reviews</span>
+          </li>
+          <li class="flex items-center">
+            <span class="mr-4">🛍️</span>
+            <span class="font-semibold">Our Store</span>
+          </li>
+        </ul>
+      </div>
+      <img src="/assets/images/tripe.jpg" alt="Travel Image" class="rounded-lg shadow-lg h-[300px] object-cover">
+    </section>
+
+    <!-- Section 2: Contenu principal -->
+    <section class="col-span-6">
+      <h1 class="text-4xl font-bold mb-4">Okavango Delta</h1>
+      <p class="text-lg mb-4">
+        <span class="line-through text-gray-500">$99</span>
+        <span class="text-[#FF9933] font-bold">$89</span>
+        <span class="ml-2">2 Days</span>
+      </p>
+      <p class="mb-8 text-gray-600">
+        Pharetra massa massa ultricies mi. Pellentesque habitant morbi tristique senectus et netus et malesuada.
+      </p>
+      <div class="flex space-x-4 mb-8 border-t border-b border-dashed border-gray-300 py-4">
+        <span class="bg-gray-200 px-4 py-2 rounded-lg flex items-center">
+          <span class="mr-2">📍</span> Australia
+        </span>
+        <span class="bg-gray-200 px-4 py-2 rounded-lg flex items-center">
+          <span class="mr-2">📍</span> Thailand
+        </span>
+        <span class="bg-gray-200 px-4 py-2 rounded-lg flex items-center">
+          <span class="mr-2">📍</span> Switzerland
+        </span>
+      </div>
+
+      <div class="my-8">
+        <p class="font-bold text-lg text-gray-800">
+          Aliquam vestibulum morbi blandit cursus risus at ultri cesue eget arcu.
+        </p>
+      </div>
+
+      <table class="table-auto w-full">
+        <tr>
+          <td class="font-bold py-2">Destination:</td>
+          <td>Botswana</td>
+        </tr>
+        <tr class="border-t border-dashed border-gray-300">
+          <td class="font-bold py-2">Departure:</td>
+          <td>April 21, 2023</td>
+        </tr>
+        <tr class="border-t border-dashed border-gray-300">
+          <td class="font-bold py-2">Arrival Time:</td>
+          <td>5:00 am</td>
+        </tr>
+        <tr class="border-t border-dashed border-gray-300">
+          <td class="font-bold py-2">Departure Time:</td>
+          <td>6:00 am</td>
+        </tr>
+        <tr class="border-t border-dashed border-gray-300">
+          <td class="font-bold py-2">Dress Code:</td>
+          <td>Full Sleeve T-Shirt, Short Pant</td>
+        </tr>
+        <tr class="border-t border-dashed border-gray-300">
+          <td class="font-bold py-2">Package Includes:</td>
+          <td>Breakfast, Lunch, Dinner</td>
+        </tr>
+        <tr class="border-t border-dashed border-gray-300">
+          <td class="font-bold py-2">Package Not Includes:</td>
+          <td>Hard Drinks</td>
+        </tr>
+      </table>
+    </section>
+
+
+    <!-- Section 3: Formulaire de réservation -->
+    <section class="col-span-3 bg-white shadow-lg p-6 rounded-lg">
+      <h2 class="text-2xl font-bold mb-4">Book A Trip</h2>
+      <p class="text-gray-500 mb-6 text-sm">And Enjoy Your Vacation At The Offer Price!</p>
+      <form>
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-bold mb-1">Name</label>
+          <input type="text" id="name" class="w-full p-2 border rounded-md">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-bold mb-1">Email</label>
+          <input type="email" id="email" class="w-full p-2 border rounded-md">
+        </div>
+        <div class="mb-4">
+          <label for="date" class="block text-sm font-bold mb-1">Date</label>
+          <input type="date" id="date" class="w-full p-2 border rounded-md">
+        </div>
+        <div class="mb-4">
+          <label for="tickets" class="block text-sm font-bold mb-1">Number of Tickets</label>
+          <input type="number" id="tickets" class="w-full p-2 border rounded-md">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-bold mb-1">Message</label>
+          <textarea id="message" rows="3" class="w-full p-2 border rounded-md"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-[#FF9933] text-white p-2 rounded-lg hover:bg-[#e67e22]">
+          Enquiry Now
+        </button>
+      </form>
+    </section>
+  </div>
+
+<!-- Section 4: Google Maps et Bannière -->
+<section>
+    <div class="container mx-auto grid grid-cols-12 gap-8 px-8">
+        <!-- Google Maps -->
+        <div class="col-span-8 h-[400px] rounded-lg shadow-lg overflow-hidden">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509427!2d144.9537363153179!3d-37.81720997975162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5774183c61a4b0!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1679832191677!5m2!1sen!2sau"
+                width="100%"
+                height="100%"
+                style="border:0"
+                allowfullscreen=""
+                loading="lazy"
+                class="rounded-lg border border-gray-300"
+            ></iframe>
+        </div>
+
+        <!-- Bannière promotionnelle -->
+        <div class="col-span-4">
+            <div
+                class="relative bg-cover bg-center rounded-lg h-[400px] w-full"
+                style="background-image: url('/assets/images/port.jpg');"
+            >
+                <div class="absolute inset-0 bg-black bg-opacity-50 h-full flex flex-col justify-center items-center text-center text-white p-6">
+                    <h2 class="text-3xl font-bold mb-4">Travel & Find the Hidden Places</h2>
+                    <p class="text-lg mb-4">Discover breathtaking destinations off the beaten path.</p>
+                    <a
+                        href="#"
+                        class="bg-[#FF9933] text-white px-6 py-2 rounded-lg font-bold hover:bg-[#e67e22] transition"
+                    >
+                        Explore Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-20">
+    <div class="container mx-auto grid grid-cols-12 gap-12 items-start px-8">
+        <!-- Image principale -->
+        <div class="col-span-6 relative">
+            <img src="/assets/images/iso.jpg" alt="Mountain View" class="rounded-lg shadow-lg">         
+        </div>
+
+        <!-- Contenu texte -->
+        <div class="col-span-6 space-y-12">
+            <!-- Amenities -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Amenities</h2>
+                <ul class="grid grid-cols-3 gap-4 text-gray-700">
+                    <li class="flex items-center space-x-2">
+                        <span>🛌</span>
+                        <span>Free Cancellation</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span>❄️</span>
+                        <span>With AC</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span>🍳</span>
+                        <span>Morning Breakfast</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span>📶</span>
+                        <span>Free Wifi</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span>🚿</span>
+                        <span>Shower</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span>☕</span>
+                        <span>Coffee</span>
+                    </li>
+                </ul>
+                <button class="bg-[#FF9933] text-white px-6 py-2 rounded-lg mt-6 hover:bg-[#e67e22]">
+                    Dial Our Experts
+                </button>
+            </div>
+
+            <!-- Campsite Rules -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Campsite Rules</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Dui id ornare arcu odio ut sem nulla pharetra. Lectus quam id leo in. Quam id leo in vitae turpis.
+                    Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Fermentum leo vel orci porta
+                    non pulvinar neque laoreet suspendisse.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class=" py-20" style="background-color:#bdbdbd9e; background-size: cover; background-position: center; background-image: url('/assets/images/world.webp');">
+    <div class="container mx-auto px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <!-- Section 1: Logo et description -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4">TRIPIX TRAVEL</h3>
+          <p class=" mb-6">
+            Votre partenaire pour des voyages sur mesure. Nous créons des expériences inoubliables en Côte d'Ivoire et partout dans le monde.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 11.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 8.5 12 8.5s2.5 1.12 2.5 2.5S13.38 13.5 12 13.5z"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 11.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 8.5 12 8.5s2.5 1.12 2.5 2.5S13.38 13.5 12 13.5z"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 11.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 8.5 12 8.5s2.5 1.12 2.5 2.5S13.38 13.5 12 13.5z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+  
+        <!-- Section 2: Liens -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Liens utiles</h4>
+          <ul>
+            <li><a href="#" class="text-gray-400 hover:text-blue-500">Accueil</a></li>
+            <li><a href="#" class="text-black-400 hover:text-blue-500">À propos</a></li>
+            <li><a href="#" class="text-black-400 hover:text-blue-500">Destinations</a></li>
+            <li><a href="#" class="text-black-400 hover:text-blue-500">Contact</a></li>
+            <li><a href="#" class="text-black-400 hover:text-blue-500">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+  
+        <!-- Section 3: Contact -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Contact</h4>
+          <ul>
+            <li class="text-black-400">Téléphone: +225 123 456 789</li>
+            <li class="text-black-400">Email: contact@tripix.com</li>
+            <li class="text-black-400">Adresse: Abidjan, Côte d'Ivoire</li>
+          </ul>
+        </div>
+  
+        <!-- Section 4: Newsletter -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Inscription à la newsletter</h4>
+          <p class="text-black-400 mb-6">Abonnez-vous pour recevoir les dernières offres et actualités de voyage.</p>
+          <form action="#" method="post">
+            <div class="flex">
+              <input type="email" placeholder="Votre email" class="px-4 py-2 w-full rounded-l-lg text-gray-800" required>
+              <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700">S'abonner</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="mt-10 text-center text-black-400">
+        <p>&copy; 2024 Tripix Travel. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+  
+  
+    
+</body>
+
+</html>

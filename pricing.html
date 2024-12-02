@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRIPIX</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+ <!-- Meta Description pour SEO -->
+ <meta name="description" content="Découvrez TRIPIX, votre créateur de voyages sur mesure. Nous offrons des expériences uniques en Côte d'Ivoire, en France, et bien plus !">
+
+ <!-- Meta Keywords (facultatif, certains moteurs ne les utilisent plus) -->
+ <meta name="keywords" content="voyages sur mesure, destinations, Côte d'Ivoire, France, tourisme, vacances, expérience unique">
+</head>
+
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+<!-- Navbar -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold text-black">TRIPIX TRAVEL</h1>
+  
+      <!-- Burger Button (visible uniquement sur mobile) -->
+      <button 
+        class="block md:hidden text-gray-600 focus:outline-none"
+        id="menu-toggle"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+  
+      <!-- Navigation Links (Desktop) -->
+      <ul class="hidden md:flex space-x-6 text-gray-600">
+        <li><a href="/index.html" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600">A Propos</a></li>
+        <li><a href="#travel" class="hover:text-blue-600">Destinations</a></li>
+        <li><a href="/pricing.html" class="hover:text-blue-600">Pricing</a></li>
+        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+  
+      <!-- Login Button -->
+      <div class="hidden md:block text-right text-sm">
+        <a href="#" class="flex items-center justify-center w-20 h-10 rounded-full border border-gray-300 hover:border-blue-600 hover:text-blue-600 transition duration-300">
+          Login
+        </a>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-white shadow-lg" id="mobile-menu">
+      <ul class="flex flex-col text-center space-y-4 py-4 text-gray-600">
+        <li><a href="/index.html" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600">A Propos</a></li>
+        <li><a href="#travel" class="hover:text-blue-600">Destinations</a></li>
+        <li><a href="/pricing.html" class="hover:text-blue-600">Pricing</a></li>
+        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+        <li>
+          <a href="#" class="inline-block w-20 h-10 rounded-full border border-gray-300 hover:border-blue-600 hover:text-blue-600 transition duration-300 mx-auto">
+            Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+    <!-- Main Content -->
+
+    <section class="bg-[#faf9f6] py-20">
+        <div class="container mx-auto px-8 text-center">
+          <!-- Titre principal -->
+          <h2 class="text-4xl font-bold mb-4">Find Your Budget Friendly Pricing Packages</h2>
+          <p class="text-lg text-gray-600 mb-12">
+            Massa tincidunt dui ut ornare lectus sit amet. A erat nam at lectus. Urna porttitor rhoncus dolor purus non. Dolor sit amet consectetur adipiscing elit duis sollicitudin.
+          </p>
+      
+          <!-- Toggle "Monthly" / "Yearly" -->
+          <div class="flex justify-center items-center space-x-4 mb-16">
+            <button class="px-6 py-2 bg-orange-100 text-orange-600 font-semibold rounded-lg focus:outline-none focus:ring-2 ring-orange-500">MONTHLY</button>
+            <button class="px-6 py-2 bg-gray-200 text-gray-600 font-semibold rounded-lg hover:bg-gray-300">YEARLY</button>
+          </div>
+      
+          <!-- Grille de prix -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Plan Basic -->
+            <div class="bg-white shadow-lg rounded-lg p-8 text-center">
+              <div class="flex justify-center items-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h11M9 21v-4M7 6h5a2 2 0 012 2v3M7 6v4a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4zm14 4a2 2 0 100-4 2 2 0 000 4z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Basic</h3>
+              <p class="text-orange-600 font-bold text-xl mb-4">10% off</p>
+              <p class="text-gray-600 mb-6">Per Month</p>
+              <ul class="space-y-2 text-gray-600 mb-6">
+                <li>✔️ Tortor aliquam nulla facilisi cras le</li>
+                <li>✔️ Sed pulvinar proin gravida justoet</li>
+                <li>✔️ Leo vel fringilla est ullamc orpertra</li>
+                <li>✔️ Luctus accumsan tortor posuere ac</li>
+                <li>✔️ Ornare massa eget eget stas purus</li>
+              </ul>
+              <a href="#" class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600">MORE DETAILS</a>
+            </div>
+      
+            <!-- Plan Advanced -->
+            <div class="bg-orange-500 text-white shadow-lg rounded-lg p-8 text-center">
+              <div class="flex justify-center items-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h11M9 21v-4M7 6h5a2 2 0 012 2v3M7 6v4a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4zm14 4a2 2 0 100-4 2 2 0 000 4z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Advanced</h3>
+              <p class="font-bold text-xl mb-4">20% off</p>
+              <p class="mb-6">Per Month</p>
+              <ul class="space-y-2 mb-6">
+                <li>✔️ Tortor aliquam nulla facilisi cras le</li>
+                <li>✔️ Sed pulvinar proin gravida justoet</li>
+                <li>✔️ Leo vel fringilla est ullamc orpertra</li>
+                <li>✔️ Luctus accumsan tortor posuere ac</li>
+                <li>✔️ Ornare massa eget eget stas purus</li>
+              </ul>
+              <a href="#" class="bg-white text-orange-600 px-6 py-2 rounded-lg hover:bg-gray-200">MORE DETAILS</a>
+            </div>
+      
+            <!-- Plan Premium -->
+            <div class="bg-white shadow-lg rounded-lg p-8 text-center">
+              <div class="flex justify-center items-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h11M9 21v-4M7 6h5a2 2 0 012 2v3M7 6v4a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4zm14 4a2 2 0 100-4 2 2 0 000 4z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Premium</h3>
+              <p class="text-orange-600 font-bold text-xl mb-4">30% off</p>
+              <p class="text-gray-600 mb-6">Per Month</p>
+              <ul class="space-y-2 text-gray-600 mb-6">
+                <li>✔️ Tortor aliquam nulla facilisi cras le</li>
+                <li>✔️ Sed pulvinar proin gravida justoet</li>
+                <li>✔️ Leo vel fringilla est ullamc orpertra</li>
+                <li>✔️ Luctus accumsan tortor posuere ac</li>
+                <li>✔️ Ornare massa eget eget stas purus</li>
+              </ul>
+              <a href="#" class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600">MORE DETAILS</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  
+
+<!-- Footer -->
+<footer class=" py-20" style="background-color:#bdbdbd9e; background-size: cover; background-position: center; background-image: url('/assets/images/world.webp');">
+    <div class="container mx-auto px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <!-- Section 1: Logo et description -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4">TRIPIX TRAVEL</h3>
+          <p class=" mb-6">
+            Votre partenaire pour des voyages sur mesure. Nous créons des expériences inoubliables en Côte d'Ivoire et partout dans le monde.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 11.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 8.5 12 8.5s2.5 1.12 2.5 2.5S13.38 13.5 12 13.5z"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 11.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 8.5 12 8.5s2.5 1.12 2.5 2.5S13.38 13.5 12 13.5z"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 11.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 8.5 12 8.5s2.5 1.12 2.5 2.5S13.38 13.5 12 13.5z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+  
+        <!-- Section 2: Liens -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Liens utiles</h4>
+          <ul>
+            <li><a href="#" class="text-gray-400 hover:text-blue-500">Accueil</a></li>
+            <li><a href="#" class="text-black-400 hover:text-blue-500">À propos</a></li>
+            <li><a href="#" class="text-black-400 hover:text-blue-500">Destinations</a></li>
+            <li><a href="#" class="text-black-400 hover:text-blue-500">Contact</a></li>
+            <li><a href="#" class="text-black-400 hover:text-blue-500">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+  
+        <!-- Section 3: Contact -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Contact</h4>
+          <ul>
+            <li class="text-black-400">Téléphone: +225 123 456 789</li>
+            <li class="text-black-400">Email: contact@tripix.com</li>
+            <li class="text-black-400">Adresse: Abidjan, Côte d'Ivoire</li>
+          </ul>
+        </div>
+  
+        <!-- Section 4: Newsletter -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Inscription à la newsletter</h4>
+          <p class="text-black-400 mb-6">Abonnez-vous pour recevoir les dernières offres et actualités de voyage.</p>
+          <form action="#" method="post">
+            <div class="flex">
+              <input type="email" placeholder="Votre email" class="px-4 py-2 w-full rounded-l-lg text-gray-800" required>
+              <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700">S'abonner</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="mt-10 text-center text-black-400">
+        <p>&copy; 2024 Tripix Travel. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+ 
+</body>
+</html>
